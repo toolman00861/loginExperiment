@@ -16,24 +16,20 @@
     }
 %>
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
+<link rel="stylesheet" href="css/home.css">
 <head>
     <title>主页</title>
 </head>
 <body>
- <h1> 欢迎进入！ <%= user.getUsername() %></h1>
- <table>
-     <tr>
-         <td>
-             <p>邮箱： <%= user.getEmail() %></p>
-         </td>
-     </tr>
-     <tr>
-         <td>
-             <p>手机号： <%= user.getPhone() %></p>
-         </td>
-     </tr>
- </table>
+    <div class="main-container">
+        <div class="welcome-container">
+            <h1> 欢迎进入！ <%= user.getUsername() %></h1>
+            <h3>当前操作者：<%= session.getAttribute("username") %></h3>
+            <p>邮箱： <%= user.getEmail() %></p>
+            <p>手机号： <%= user.getPhone() %></p>
+        </div>
+    </div>
 </body>
 </html>
