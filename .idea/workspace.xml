@@ -9,14 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba142358-f15a-4d76-a0a3-2bcceddad581" name="更改" comment="完成基本逻辑设定，登录注册，以及错误检查">
+    <list default="true" id="ba142358-f15a-4d76-a0a3-2bcceddad581" name="更改" comment="在初步框架基础上，修复了不显示错误信息的bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/loginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/loginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/registerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/registerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -382,7 +379,7 @@
       <updated>1730877750229</updated>
       <workItem from="1730877751241" duration="18453000" />
       <workItem from="1731052192998" duration="11712000" />
-      <workItem from="1731129160752" duration="1084000" />
+      <workItem from="1731129160752" duration="1256000" />
     </task>
     <task id="LOCAL-00001" summary="完成基本逻辑设定，登录注册，以及错误检查">
       <option name="closed" value="true" />
@@ -392,7 +389,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731063474376</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="在初步框架基础上，修复了不显示错误信息的bug">
+      <option name="closed" value="true" />
+      <created>1731130363452</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731130363452</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,6 +405,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="完成基本逻辑设定，登录注册，以及错误检查" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成基本逻辑设定，登录注册，以及错误检查" />
+    <MESSAGE value="在初步框架基础上，修复了不显示错误信息的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="在初步框架基础上，修复了不显示错误信息的bug" />
   </component>
 </project>
