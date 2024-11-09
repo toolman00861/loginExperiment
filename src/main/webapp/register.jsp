@@ -5,13 +5,13 @@
   Time: 0:00
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>
     <title>注册界面</title>
 </head>
 <body>
-    <form action="">
+    <form action="registerServlet" method="post">
         <table>
             <tr>
                 <td>用户名：</td>
@@ -35,13 +35,27 @@
         </table>
     </form>
     <br/>
+    <br/>
     <%
-        String msg = (String) session.getAttribute("msg");
-        if (msg != null) {
+        if (session != null) { // 确保会话存在
+            String msg = (String) session.getAttribute("msg");
+            if (msg != null) {
     %>
-    <p style='color:orangered;'> <%= msg %> </p>
+    <p style='color:lightgreen;'> <%= msg %> </p>
     <%
-            session.removeAttribute("msg"); // 显示后清除信息
+                session.removeAttribute("msg"); // 显示后清除信息
+            }
+        }
+    %>
+    <%
+        if (session != null) { // 确保会话存在
+            String err = (String) session.getAttribute("err");
+            if (err != null) {
+    %>
+    <p style='color:orangered;'> <%= err %> </p>
+    <%
+                session.removeAttribute("err"); // 显示后清除信息
+            }
         }
     %>
 </body>

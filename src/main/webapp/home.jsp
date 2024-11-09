@@ -10,7 +10,7 @@
 <%
     User user = new User();
     if(session != null) {
-        String name = (String) session.getAttribute("user");
+        String name = (String) session.getAttribute("username");
         userService service = new userService();
         user = service.findUser(name);
     }
@@ -22,14 +22,16 @@
     <title>主页</title>
 </head>
 <body>
- <h1> 欢迎 <%= user.getUsername() %></h1>
+ <h1> 欢迎进入！ <%= user.getUsername() %></h1>
  <table>
      <tr>
          <td>
-             <p><%= user.getEmail() %></p>
+             <p>邮箱： <%= user.getEmail() %></p>
          </td>
+     </tr>
+     <tr>
          <td>
-             <p><%= user.getPhone() %></p>
+             <p>手机号： <%= user.getPhone() %></p>
          </td>
      </tr>
  </table>

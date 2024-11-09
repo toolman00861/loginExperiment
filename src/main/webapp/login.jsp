@@ -46,7 +46,7 @@
 %>
 <p style='color:orangered;'> <%= err %> </p>
 <%
-      session.removeAttribute("msg"); // 显示后清除信息
+      session.removeAttribute("err"); // 显示后清除信息
     }
   }
 %>
