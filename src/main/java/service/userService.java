@@ -2,40 +2,29 @@ package service;
 
 import JavaBean.User;
 
-import java.util.ArrayList;
+import java.sql.SQLException;
 import java.util.List;
+import Dao.UserDao;
 
 public class userService {
-    private static List<User> userList = new ArrayList<>() ;
-    public boolean validateUser(String user) {
-        for (User u : userList) {
-            if (u.getUsername().equals(user)) {
-                return true;
-            }
-        }
-        return false;
+    private final UserDao userDao = new UserDao();
+    public boolean validateUser(String name) throws SQLException {
+        return userDao.getUserByName(name) != null;
     }
-    public boolean login(String name, String pwd){
-        for (User u : userList) {
-            if (u.getUsername().equals(name) && u.getPassword().equals(pwd)) {
-                return true;
-            }
-        }
-        return false;
+    public boolean login(String name, String pwd) throws SQLException {
+        return userDao.getUserByName(name).getPassword().equals(pwd);
     }
-    public void addUser(String username, String password, String email, String phone){
+    public void addUser(String username, String password, String email, String phone) throws SQLException {
         User user = new User(username, password, email, phone);
-        userList.add(user);
+        userDao.addUser(user);
     }
-    public List<User> getUserList(){
-        return userList;
+    public List<User> getUserList() throws SQLException {
+        return userDao.getAllUser();
     }
-    public User findUser(String username){
-        for (User u : userList) {
-            if (u.getUsername().equals(username)) {
-                return u;
-            }
-        }
-        return null;
+    public User findUser(String username) throws SQLException {
+        return userDao.getUserByName(username);
+    }
+    public boolean validEmail(String email) throws SQLException {
+        return userDao.getUserByEmail(email) != null;
     }
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="15133b46-2740-43d1-a3de-466780ba87dc" name="software.aws.rds.jdbc.mysql.Data Source Mapping">
+      <data-sources db="5932a678-dd1f-4047-a217-0ee09121f3a3" />
+    </mapping>
+  </component>
+</project>

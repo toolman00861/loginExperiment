@@ -30,7 +30,11 @@ public class registerServlet extends HttpServlet {
                 log("Username already exists");
                 session.setAttribute("err", "用户名已经存在！");
                 response.sendRedirect("register.jsp");
-            } else {
+            } else if (uService.validEmail(email)) {
+                log("Email already exists");
+                session.setAttribute("err", "邮箱已经存在！");
+                response.sendRedirect("register.jsp");
+            }else {
                 uService.addUser(username, password, email, phone);
                 log(username + "registered successfully");
                 session.setAttribute("msg", "注册成功，请登录。");
